@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="angularjs" type="javaScript">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Full Stack/fullstack-course5/examples/Lecture40/lib/angular-ui-router.min.js" />
+      <root url="file://$PROJECT_DIR$/../Full Stack/fullstack-course5/examples/Lecture40/lib/angular.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
