@@ -28,10 +28,23 @@ function MenuDataService($http,$q,ApiBasePath){
         return $http({
             method: "GET",
             url: ApiBasePath}).then(function (result) {
-                console.log(result.data);
+                //console.log(result.data);
              return result.data;
         })
         };
+
+    service.getItemsForCategory =function(categoryShortName){
+        console.log("woorking as expected");
+        var requestURI ="https://davids-restaurant.herokuapp.com/menu_items.json";
+        return $http({
+            method: "GET",
+            url: requestURI,
+            params: {
+                category: categoryShortName
+            }
+        });
+    };
+
     //
     //
     //

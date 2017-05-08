@@ -29,17 +29,17 @@ function RoutesConfig($stateProvider,$urlRouterProvider) {
     });
 
     $stateProvider.state('categoryDetails', {
-        url: '/category-detail/{categoryId}',
-        templateUrl: 'src/restaurantlist/templates/categorydetails.template.html',
-        controller : 'CategoryDetailsController as categoryDetController',
+        url: '/category-detail/{shortName}',
+        templateUrl: 'src/restaurantlist/templates/categorydetailsmain.html',
+        controller : 'categoryDetailsController as categoryController',
         resolve :{
-            details : ['MenuDataService',function(MenuDataService){
-                return MenuDataService.getItemsForCategory();
+            categoryDetail : ['MenuDataService','$stateParams', function (MenuDataService,$stateParams){
+                return MenuDataService.getItemsForCategory($stateParams.shortName);
             }]
         }
-    })
+
+    });
 
 }
-
 
 })();

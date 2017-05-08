@@ -1,4 +1,4 @@
-<li ng-repeat="category in $ctrl.categoriesComp" ui-sref="">
+<li ng-repeat="category in $ctrl.categoriesComp" ui-sref="categoryDetails({shortName:category.short_name})">
     {{category.name}}
     {{category.short_name}}
 </li>

@@ -7,9 +7,10 @@
     RestCategoriesController.$inject = ['categories']  ;
     function RestCategoriesController(categories){
         var restaurantController = this;
+
         restaurantController.categories = categories;
-
-
     }
+
+
 
 })();
